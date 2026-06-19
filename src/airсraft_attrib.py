@@ -25,6 +25,13 @@ class Airplane:
                 raise ValueError("Высота не может быть отрицательной")
             self.geo_altitude = altitude
 
+    @classmethod
+    def cast_to_object_list(cls, airplanes):
+        airplanes_list =[]
+        for airplane in airplanes:
+            airplanes_list.append(Airplane.from_api_row(airplane))
+
+
     def __le__(self, other):
         return self.velocity <= other.velocity
     def __ge__(self, other):
