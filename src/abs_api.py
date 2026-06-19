@@ -24,9 +24,11 @@ class SearchAreaData(WorkWithApi):
         self.airplanes = None
 
     def connector(self, url: str, headers=None, params=None):
+        """Метод подключения к API"""
         return requests.get(url, headers=headers, params=params)
 
     def get_data(self, country: str):
+        """Метод получения данных о самолётах по координатам"""
         headers_nominatim = {
             'User-Agent': 'test-app/1.0',
         }
@@ -58,11 +60,12 @@ class SearchAreaData(WorkWithApi):
                       'lomax': float(geo_coordinates[3]), }
             response = get(url=self.__url_airplanes, params=params)
             self.airplanes = response.json()
+            print(self.airplanes)
         else:
             print(f'код ошибки {response.status_code}')
             print(f'Сервис {self.__url_coord} недоступен')
 
 
-# if __name__ == '__main__':
-#     api = SearchAreaData()
-#     api.get_data('Canada')
+if __name__ == '__main__':
+    api = SearchAreaData()
+    api.get_data('Italy')
