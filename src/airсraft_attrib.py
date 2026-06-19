@@ -38,12 +38,11 @@ class Airplane:
 
     @classmethod
     def from_api_row(cls, row):
-        # row — это одна строка из states
         return cls(
             icao24=row[0],
             callsign=row[1],
             country=row[2],
-            velocity=row[9],  # может быть None
-            geo_altitude=row[11]  # может быть None
+            velocity=row[9],
+            geo_altitude=row[11]
         )
 
