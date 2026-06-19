@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import json
 import os
+from pathlib import Path
 
 from airсraft_attrib import Airplane
 
@@ -24,7 +25,9 @@ class JSONSaver(AddFile):
     """Класс для записи данных в JSON файл"""
 
     def __init__(self, filename = "airplanes.json"):
-        self.filename = filename
+        base_dir = Path("data")
+        base_dir.mkdir(parents=True, exist_ok=True)
+        self.filename = str(base_dir / filename)
         if not os.path.exists(self.filename):
             with open(self.filename, "w", encoding="utf-8") as f:
                 json.dump([], f, ensure_ascii=False, indent=4)

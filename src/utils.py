@@ -7,7 +7,7 @@ def filter_airplanes(planes: list, countries: list):
     return [i for i in planes if i.country in countries]
 
 def get_aeroplanes_by_altitude(planes: list, altitude: str):
-    """функция выборки самолетов по диапазону высот"""
+    """Функция выборки самолетов по диапазону высот"""
     try:
         alt = altitude.split('-')
         alt_min = float(alt[0].strip())
@@ -36,7 +36,6 @@ def print_aeroplanes(planes: list):
         print(
             f"{i}.Идентификатор: {a.icao24} | Позывной: {a.callsign} | Страна регистрации: {a.country} | Горизонтальная скорость (м/с){a.velocity} | Высота: {a.geo_altitude}"
         )
-
 
 # if __name__ == '__main__':
 

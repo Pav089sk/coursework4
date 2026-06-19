@@ -30,6 +30,7 @@ class Airplane:
         airplanes_list =[]
         for airplane in airplanes:
             airplanes_list.append(Airplane.from_api_row(airplane))
+        return airplanes_list
 
 
     def __le__(self, other):
@@ -45,11 +46,14 @@ class Airplane:
 
     @classmethod
     def from_api_row(cls, row):
+        def safe_get(idx):
+            return row[idx] if len(row) > idx else None
+
         return cls(
-            icao24=row[0],
-            callsign=row[1],
-            country=row[2],
-            velocity=row[9],
-            geo_altitude=row[11]
+            icao24=safe_get(0),
+            callsign=safe_get(1),
+            country=safe_get(2),
+            velocity=safe_get(9),
+            geo_altitude=safe_get(11)
         )
 
