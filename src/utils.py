@@ -1,10 +1,11 @@
-
+from src.aircraft_attrib import Airplane
 
 def filter_airplanes(planes: list, countries: list):
     """Фильтрация по странам"""
     if not countries:
         return planes
-    return [i for i in planes if i.country in countries]
+    target_countries = [c.strip().lower() for c in countries if c.strip()]
+    return [p for p in planes if p.country.lower() in target_countries]
 
 def get_aeroplanes_by_altitude(planes: list, altitude: str):
     """Функция выборки самолетов по диапазону высот"""
@@ -15,7 +16,8 @@ def get_aeroplanes_by_altitude(planes: list, altitude: str):
         return [i for i in planes if i.geo_altitude is not None and alt_min <= i.geo_altitude <= alt_max]
     except (ValueError, IndexError):
         print('Введено некорректное значение высоты')
-    return planes
+        return []
+
 
 def sort_airplanes(planes: list):
     """Сортировка по высоте"""

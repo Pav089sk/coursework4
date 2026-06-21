@@ -3,7 +3,7 @@ import json
 import os
 from pathlib import Path
 
-from airсraft_attrib import Airplane
+from aircraft_attrib import Airplane
 
 
 class AddFile(ABC):
@@ -29,8 +29,8 @@ class JSONSaver(AddFile):
         base_dir.mkdir(parents=True, exist_ok=True)
         self.filename = str(base_dir / filename)
         if not os.path.exists(self.filename):
-            with open(self.filename, "w", encoding="utf-8") as f:
-                json.dump([], f, ensure_ascii=False, indent=4)
+            with open(self.filename, "w", encoding="utf-8") as file:
+                json.dump([], file, ensure_ascii=False, indent=4)
 
     def add_info(self, plane: Airplane):
         """Добавление самолета в файл JSON"""
@@ -62,11 +62,36 @@ class JSONSaver(AddFile):
         self._write_file(result)
 
     def _read_file(self):
-        with open(self.filename, 'r', encoding="utf-8") as f:
-            data = json.load(f)
+        with open(self.filename, 'r', encoding="utf-8") as file:
+            data = json.load(file)
         return data
 
     def _write_file(self, data):
-        with open(self.filename, 'w', encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
+        with open(self.filename, 'w', encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
 
+# if __name__ == '__main__':
+#     filename = "data/test_airplanes.json"
+#     if os.path.exists(filename):
+#         os.remove(filename)  # удаляем старый файл, чтобы начать с чистого листа
+#
+#     saver = JSONSaver("test_airplanes.json")
+#
+#     # Создаём пару самолётов
+#     p1 = Airplane('39de53', 'TVF10HW', 'France', 126.42, 1242.06)
+#     p2 = Airplane('4bc8a7', 'TCREG', 'Turkey', 214.3, 13655.04)
+#
+#     # Добавляем
+#     saver.add_info(p1)
+#     saver.add_info(p2)
+#
+#     # Получаем по критерию
+#     france_planes = saver.get_info({"country": "France"})
+#     print(france_planes)  # [{'icao24': '39de53', ...}]
+#
+#     # Удаляем по критерию (например, все из Турции)
+#     saver.deleter_info({"country": "Turkey"})
+#
+#     # Проверяем, что осталось
+#     all_planes = saver.get_info({})
+#     print(all_planes)  # должен остаться только p1

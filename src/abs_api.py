@@ -1,5 +1,4 @@
 import requests
-from requests import get
 from abc import ABC, abstractmethod
 
 
@@ -32,7 +31,6 @@ class SearchAreaData(WorkWithApi):
         headers_nominatim = {
             'User-Agent': 'test-app/1.0',
         }
-        # Указываем параметры: в каком формате возвращать данные и максимальную длину списка стран в ответе.
         params_nominatim = {
             'country': country,
             'format': 'json',
@@ -40,32 +38,29 @@ class SearchAreaData(WorkWithApi):
         }
         response = self.connector(
             self.__url_coord,
-            headers=headers_nominatim,  # явно указываем имя аргумента
-            params=params_nominatim  # явно указываем имя аргумента
+            headers=headers_nominatim,
+            params=params_nominatim
         )
         if response.status_code == 200:
             data = response.json()
             if not data:
-                print('Страна не найдена')
                 return
 
             geo_coordinates = data[0].get('boundingbox')
             if geo_coordinates is None:
-                print("Нет boundingbox")
                 return
             # Параметры для фильтрации самолетов по их географическим координатам.
             params = {'lamin': float(geo_coordinates[0]),
                       'lamax': float(geo_coordinates[1]),
                       'lomin': float(geo_coordinates[2]),
                       'lomax': float(geo_coordinates[3]), }
-            response = get(url=self.__url_airplanes, params=params)
+            response = self.connector(self.__url_airplanes, params=params)
             self.airplanes = response.json()
-            print(self.airplanes)
+            return self.airplanes
         else:
-            print(f'код ошибки {response.status_code}')
-            print(f'Сервис {self.__url_coord} недоступен')
+            return
 
 
 if __name__ == '__main__':
     api = SearchAreaData()
-    api.get_data('Italy')
+    print(api.get_data('Greece'))
