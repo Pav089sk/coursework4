@@ -8090,5 +8090,138 @@
         "country": "Canada",
         "velocity": 147.57,
         "geo_altitude": 2506.98
+    },
+    {
+        "icao24": "300554",
+        "callsign": "AUA51SN",
+        "country": "Italy",
+        "velocity": 221.47,
+        "geo_altitude": 9700.26
+    },
+    {
+        "icao24": "3003ae",
+        "callsign": "DLA3LA",
+        "country": "Italy",
+        "velocity": 241.34,
+        "geo_altitude": 9380.22
+    },
+    {
+        "icao24": "3003ad",
+        "callsign": "DLH276",
+        "country": "Italy",
+        "velocity": 204.89,
+        "geo_altitude": 8770.62
+    },
+    {
+        "icao24": "30025c",
+        "callsign": "TJD801",
+        "country": "Italy",
+        "velocity": 196.69,
+        "geo_altitude": 8656.32
+    },
+    {
+        "icao24": "300a3b",
+        "callsign": "ITY1317",
+        "country": "Italy",
+        "velocity": 223.93,
+        "geo_altitude": 8305.8
+    },
+    {
+        "icao24": "3006b5",
+        "callsign": "DLA9LK",
+        "country": "Italy",
+        "velocity": 216.73,
+        "geo_altitude": 6918.96
+    },
+    {
+        "icao24": "300393",
+        "callsign": "AUA547H",
+        "country": "Italy",
+        "velocity": 188.19,
+        "geo_altitude": 4213.86
+    },
+    {
+        "icao24": "31ddcb",
+        "callsign": "ID154",
+        "country": "Italy",
+        "velocity": 59.47,
+        "geo_altitude": 2522.22
+    },
+    {
+        "icao24": "300557",
+        "callsign": "DLA1YC",
+        "country": "Italy",
+        "velocity": 135.1,
+        "geo_altitude": 2103.12
+    },
+    {
+        "icao24": "300a3a",
+        "callsign": "ITY154",
+        "country": "Italy",
+        "velocity": 116.74,
+        "geo_altitude": 1844.04
+    },
+    {
+        "icao24": "300733",
+        "callsign": "IOCRM",
+        "country": "Italy",
+        "velocity": 59.87,
+        "geo_altitude": 1501.14
+    },
+    {
+        "icao24": "3009bc",
+        "callsign": "ARES44",
+        "country": "Italy",
+        "velocity": 63.31,
+        "geo_altitude": 1493.52
+    },
+    {
+        "icao24": "30093e",
+        "callsign": "ISETH",
+        "country": "Italy",
+        "velocity": 68.64,
+        "geo_altitude": 1493.52
+    },
+    {
+        "icao24": "30099b",
+        "callsign": "IOZZR",
+        "country": "Italy",
+        "velocity": 50.87,
+        "geo_altitude": 1280.16
+    },
+    {
+        "icao24": "300640",
+        "callsign": "ILMBD",
+        "country": "Italy",
+        "velocity": 66.69,
+        "geo_altitude": 1264.92
+    },
+    {
+        "icao24": "30081f",
+        "callsign": "CPV369",
+        "country": "Italy",
+        "velocity": 77.6,
+        "geo_altitude": 1181.1
+    },
+    {
+        "icao24": "300366",
+        "callsign": "IEAAA",
+        "country": "Italy",
+        "velocity": 76.82,
+        "geo_altitude": 1135.38
+    },
+    {
+        "icao24": "3006a9",
+        "callsign": "None",
+        "country": "Italy",
+        "velocity": 66.86,
+        "geo_altitude": 1112.52
+    },
+    {
+        "icao24": "300812",
+        "callsign": "IOZZF",
+        "country": "Italy",
+        "velocity": 37.5,
+        "geo_altitude": 1097.28
     }
 ]
