@@ -1,8 +1,10 @@
-import pytest
 import json
 from pathlib import Path
-from src.aircraft_attrib import Airplane
+
+import pytest
+
 from src.abs_for_file import JSONSaver
+from src.aircraft_attrib import Airplane
 
 
 @pytest.fixture
@@ -14,14 +16,9 @@ def json_saver_local():
     saver = JSONSaver(filename=str(tmp_file))
     yield saver
 
+
 def test_add_one_plane(json_saver_local):
-    plane = Airplane(
-        icao24="ab12",
-        callsign="FLIGHT-A",
-        country="USA",
-        velocity=500,
-        geo_altitude=10000
-    )
+    plane = Airplane(icao24="ab12", callsign="FLIGHT-A", country="USA", velocity=500, geo_altitude=10000)
     json_saver_local.add_info(plane)
     all_data = json_saver_local.get_info({})
     assert len(all_data) == 1

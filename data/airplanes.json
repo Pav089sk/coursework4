@@ -7992,5 +7992,103 @@
         "country": "Canada",
         "velocity": 87.55,
         "geo_altitude": 1036.32
+    },
+    {
+        "icao24": "c04738",
+        "callsign": "CJT2384",
+        "country": "Canada",
+        "velocity": 173.89,
+        "geo_altitude": 3497.58
+    },
+    {
+        "icao24": "c05ea6",
+        "callsign": "ACA165",
+        "country": "Canada",
+        "velocity": 187.59,
+        "geo_altitude": 3352.8
+    },
+    {
+        "icao24": "c06a65",
+        "callsign": "CGOHO",
+        "country": "Canada",
+        "velocity": 83.98,
+        "geo_altitude": 3208.02
+    },
+    {
+        "icao24": "c021f6",
+        "callsign": "WJA669",
+        "country": "Canada",
+        "velocity": 161.44,
+        "geo_altitude": 3185.16
+    },
+    {
+        "icao24": "c067ae",
+        "callsign": "ACA395",
+        "country": "Canada",
+        "velocity": 142.52,
+        "geo_altitude": 3124.2
+    },
+    {
+        "icao24": "c02267",
+        "callsign": "ASP473",
+        "country": "Canada",
+        "velocity": 150.07,
+        "geo_altitude": 3070.86
+    },
+    {
+        "icao24": "c07d20",
+        "callsign": "JZA7956",
+        "country": "Canada",
+        "velocity": 144.41,
+        "geo_altitude": 3032.76
+    },
+    {
+        "icao24": "c04d0a",
+        "callsign": "WEN3402",
+        "country": "Canada",
+        "velocity": 113.44,
+        "geo_altitude": 2971.8
+    },
+    {
+        "icao24": "c077b1",
+        "callsign": "CGTIM",
+        "country": "Canada",
+        "velocity": 133.8,
+        "geo_altitude": 2933.7
+    },
+    {
+        "icao24": "c06050",
+        "callsign": "CGKMH",
+        "country": "Canada",
+        "velocity": 45.6,
+        "geo_altitude": 2887.98
+    },
+    {
+        "icao24": "c06c8f",
+        "callsign": "CGPCW",
+        "country": "Canada",
+        "velocity": 122.9,
+        "geo_altitude": 2788.92
+    },
+    {
+        "icao24": "c05ce2",
+        "callsign": "WEN3267",
+        "country": "Canada",
+        "velocity": 107.02,
+        "geo_altitude": 2720.34
+    },
+    {
+        "icao24": "c02de7",
+        "callsign": "SUT8291",
+        "country": "Canada",
+        "velocity": 117.73,
+        "geo_altitude": 2667.0
+    },
+    {
+        "icao24": "c07eee",
+        "callsign": "WJA222",
+        "country": "Canada",
+        "velocity": 147.57,
+        "geo_altitude": 2506.98
     }
 ]
