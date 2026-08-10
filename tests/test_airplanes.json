@@ -1,0 +1,9 @@
+[
+    {
+        "icao24": "x2",
+        "callsign": "F2",
+        "country": "RU",
+        "velocity": 600.0,
+        "geo_altitude": 11000.0
+    }
+]
